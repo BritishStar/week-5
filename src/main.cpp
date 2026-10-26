@@ -1,23 +1,37 @@
-#include <arduino.h>
+#include <Arduino.h> 
 
+ 
 
+void setup() //initializes the communications 
 
-// put function declarations here:
-float myFunction(float, float);
+{ 
 
-void setup() {
-  Serial.begin(9600);
-}
+    Serial.begin(9600); 
 
-void loop() {
-float number1 = getNumberFromUser("Enter a number: ");
-  float number2 = getNumberFromUser("Enter another number: ");
-  float result = myFunction(number1, number2);
-  Serial.println(result);
+    // set the built in LED as output 
+
+    pinMode( 13 , OUTPUT); 
+
 } 
 
-// put function definitions here:
-float myFunction(float x, float y) {
-  return x * y;
-  Serial.println("The result is: " + String(result));
-}
+ 
+
+void loop() //on and off for led light 
+
+{ 
+
+    digitalWrite(13, HIGH); 
+
+    delay(1000);                    // wait 1 second 
+
+    //Serial.print("LED is ON"); // LED on 
+
+    digitalWrite(13, LOW);   
+
+    delay(1000);                     // wait 1 second 
+
+    //Serial.print("LED is OFF"); // LED off 
+
+                        
+
+} 
