@@ -1,1 +1,3 @@
-# week-5
+# dherik - blink
+#ashikk - multiplication
+parham - sum
